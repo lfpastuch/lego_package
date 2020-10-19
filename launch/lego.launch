@@ -16,12 +16,12 @@
   </node> -->
 
   <!-- Launch the mux node with the parameters from params.yaml -->
-  <node pkg="f1tenth_legoteam" name="mux_controller" type="mux.cpp" output="screen">
+  <node pkg="f1tenth_legoteam" name="mux_controller" type="mux" output="screen">
     <rosparam command="load" file="$(find f1tenth_legoteam)/params.yaml"/>
   </node>
 
   <!-- Launch the behavior controller node with the parameters from params.yaml -->
-  <node pkg="f1tenth_legoteam" name="behavior_controller" type="behavior_controller.cpp" output="screen">
+  <node pkg="f1tenth_legoteam" name="behavior_controller" type="behavior_controller" output="screen">
     <rosparam command="load" file="$(find f1tenth_legoteam)/params.yaml"/>
   </node>
 
